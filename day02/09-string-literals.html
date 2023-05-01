@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const salary = "3000";
+      const name = "Ali";
+      const company = "Starlink";
+      //const message = name + ", " + company + " şirketinden aylık " + salary + "$ maaşla işe başladı ";
+      //const message1 = `Ali, Starlink şirketinde aylık 3000$ maaşla işe başladı`;
+      const message = `${name}, ${company} şirketinde aylık $${salary} maaşla işe başladı`;
+      alert(message);
+
+      // backtick ile çok satır değer içeren string değişkenler oluşturulabilir.
+      const paragraf = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corporis quibusdam, voluptates omnis ullam aut nobis voluptate minima inventore labore illum perferendis, quo impedit deserunt hic quidem laborum sint nam!
+     Suscipit est nesciunt, expedita blanditiis omnis saepe sunt maiores autem harum ullam modi commodi reiciendis iusto dolorem magnam voluptate quos dolorum repellat quod molestiae. Facilis porro repellat quas aut aliquid?
+     Vero nisi adipisci deleniti nam quam asperiores, impedit odit nostrum necessitatibus enim voluptas deserunt rem quasi voluptatum consequatur modi exercitationem rerum veritatis corrupti placeat! Consequuntur est ullam delectus consequatur enim?
+     Non, quibusdam doloremque. Deleniti minima eum similique recusandae omnis ratione sint quidem nihil corrupti enim. Iusto voluptatibus esse necessitatibus est tempora deleniti porro consequatur placeat incidunt perferendis? Dicta, minima illum.`;
+
+      // Eskiden string interpolation bu şekildeydi
+      let html = '<div class="card">';
+      html = html + '<div class="card-body">Hello</div>';
+      html = html + "</div>";
+      document.write(html);
+      let html2 =
+        '<div class="card">' +
+        '<div class="card-body">' +
+        company +
+        "</div>" +
+        "</div>";
+      document.write(html2);
+      // ARtık böyle kolayca yapılıyor
+      const newHtml = `
+                <div>
+                    <h2>Title       X</h2>
+                    <p>${company}</p>    
+                </div>
+,            `;
+      document.write(newHtml);
+    </script>
+  </body>
+</html>
