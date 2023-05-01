@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+
+          let num = 15; 
+          console.log(num);
+
+          num = num ** 2;
+          console.log(num);
+
+          num++; // num = num + 1;
+          console.log(num);
+
+          num = num + 125;
+          console.log(num);
+
+          let result = "5" + num;
+          console.log(result);
+          console.log(typeof result);
+
+          result = "4" + 3 + 7;
+          console.log(result); // 437 
+
+          result = 4 + 3 + "7";
+          console.log(result); // 77
+
+          result = 4 + 3 - "7";
+          console.log(result); // 0
+
+          result = 4 + 3 - "7a";
+          console.log(result); // NaN
+
+          result = "4" * 3 + 7;
+          console.log(result); //19 
+          console.log(typeof result); // number
+
+          result = "4" + 3 * 7;
+          console.log(result); //421 
+          console.log(typeof result); // string
+
+
+     </script>
+</body>
+</html>

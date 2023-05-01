@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    
+    <script>
+       var score1 = 45;
+       console.log(score1);
+       score1 = 745; // yukarıdaki 45 değeri değişti
+
+       var score1 = 113; // yukarıdaki 745 değişti çöpe atıldı, yeni değer 113 oldu
+       console.log(score1);
+
+
+        let score2 = 11;
+        console.log(score2);
+        score2 = 33;
+        console.log(score2);
+
+        // alttaki satır hata verir. let aynı isimde ve 
+        // aynı SCOPE ta değişken tanımına izin vermez
+        // let score2 =44;
+        
+
+        const name = "Ali";
+        //var name ="Veli";
+
+
+        // alt satır hataya sebep olur çünkü sabitler değiştirelemez.
+        // name = "Veli";
+    </script>
+</body>
+</html>
