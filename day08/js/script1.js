@@ -1,0 +1,1 @@
+let global1 = "Veli";
