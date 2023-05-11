@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Array Methods</title>
+</head>
+<body>
+     
+     <script>
+
+          const cars = ["Porche", "Ferrari", "Bugatti", "Tesla"];
+          console.log(cars);
+
+
+          const arrLength = cars.push("Audi"); // sonuna yeni elemanı ekler
+          console.log(cars);
+          console.log(arrLength);
+
+          cars.pop();
+          console.log(cars); // sondaki elemanı siler
+
+          cars.shift();
+          console.log(cars); // baştaki elemanı siler
+
+          cars.unshift("BMW");
+          console.log(cars); // baş tarafa yeni elamanı ekler
+
+          cars.sort(); // alfabetik sıralama yapar     
+          console.log(cars);
+
+          cars.reverse(); // tersten sıralama yapar
+          console.log(cars);
+
+          cars.splice(2, 1, "Lamborgini", "Audi", "Mini Cooper");
+          console.log(cars);
+
+     </script>
+</body>
+</html>
