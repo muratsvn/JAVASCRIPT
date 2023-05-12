@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Iteration map</title>
+</head>
+<body>
+     <script>
+          const animals = ["fil", "kuş", "kaplan", "deve", "fare", "aslan", "kartal"];   
+          
+          const cb = (animal) => {
+            console.log(animal);
+          }
+          
+          animals.map(cb);// mevcut dizi üzerinde değişiklik yapıp, yeni bir dizi döndürür
+
+
+          // KISA YÖNTEM
+          const newAnimals = animals.map((animal)=> {
+            if(animal.startsWith("k")){ 
+                return animal.toUpperCase(); // tüm elemanları bakar, k ile başlayanlarla birlikte
+                                             // k ile başlamayanları undefined olarak döndürür
+            }
+          });
+
+          console.log(newAnimals);
+          console.log(newAnimals === animals); // false
+
+      </script> 
+</body>
+</html>
