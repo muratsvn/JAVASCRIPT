@@ -24,6 +24,6 @@ const loadData = () => {
           </tr>`; // yukarıda import edilen yerden gelen bilgileri dinamik olarak aldık
      }) 
      const tbodyEl = document.querySelector("#tblStudents tbody");
-    tbodyEl.innerHTML = html;
+     tbodyEl.innerHTML = html;
  }
  loadData();
