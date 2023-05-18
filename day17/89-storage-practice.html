@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Storage Practice</title>
+</head>
+<body>
+     
+     <h1>Welcome to my app</h1>
+     <p><em id="lblCounter"></em></p>
+
+     <script>
+
+          const handleCounter = () => {
+               let count =localStorage.getItem("pageCounter");
+               //console.log(count);  ilk kez girilmeden önce null döndürür
+               //count = count ? parseInt(count) : 0;
+               //count = count ?? 0; // nullish, null veya undefined ise 0 değilse kendisini döndürür
+               count ??= 0; // nullish in kısaltması
+               count ++;
+
+               localStorage.setItem("pageCounter", count);
+               document.getElementById("lblCounter").innerHTML = `Uygulamamıza ${count} kez giriş yaptınız`;
+          }
+
+
+          handleCounter();
+
+
+     </script>
+</body>
+</html>
