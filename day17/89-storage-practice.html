@@ -8,8 +8,13 @@
 </head>
 <body>
      
-     <h1>Welcome to my app</h1>
+     <h1 id="lblWelcomeMessage">Welcome to my app</h1>
      <p><em id="lblCounter"></em></p>
+
+     <form action="">
+          <input type="text" id="txtName" placeholder="Enter your name">
+          <button id="btnSave">Save</button>
+     </form>
 
      <script>
 
@@ -25,8 +30,19 @@
                document.getElementById("lblCounter").innerHTML = `Uygulamamıza ${count} kez giriş yaptınız`;
           }
 
+          const handleMessage = () => {
+               const name = localStorage.getItem("name");
+               document.getElementById("lblWelcomMessage").innerHTML = `Welcome to my app, ${name ?? "Guest"}`;
+          }
+
+          document.getElementById("btnSave").addEventListener("click", () => {
+               const txtName = document.getElementById("txtName");
+               localStorage.setItem("name", txtName.value);
+          })
+
 
           handleCounter();
+          handleMessage();
 
 
      </script>
